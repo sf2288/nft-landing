@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomImage from '../CustomImage/indes';
+import CustomImage from '../CustomImage';
 
 export default function ProductBlock({ data }) {
   return (

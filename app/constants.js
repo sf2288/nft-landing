@@ -24,6 +24,44 @@ import artist5 from '../public/artist5.png';
 import artist6 from '../public/artist6.png';
 import artist7 from '../public/artist7.png';
 import artist8 from '../public/artist8.png';
+import telegram from '../public/socials/telegram.png';
+import twitter from '../public/socials/twitter.png';
+import youtube from '../public/socials/youtube.png';
+import facebook from '../public/socials/facebook.png';
+import instagram from '../public/socials/instagram.png';
+import tiktok from '../public/socials/tiktok.png';
+
+export const socials = [
+  telegram,
+  twitter,
+  youtube,
+  facebook,
+  instagram,
+  tiktok,
+];
+
+export const navbarLinks = [
+  {
+    name: 'Explore',
+    url: '/explore',
+  },
+  {
+    name: 'Activity',
+    url: '/activity',
+  },
+  {
+    name: 'Resources',
+    url: '/resources',
+  },
+  {
+    name: 'Account',
+    url: '/account',
+  },
+  {
+    name: 'Connect Wallet',
+    url: '/connect-wallet',
+  },
+];
 
 export const infoData = [
   {
