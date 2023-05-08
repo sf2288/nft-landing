@@ -9,25 +9,26 @@ import CustomImage from '../CustomImage';
 import SearchIcon from '../SvgComponents/SearchIcon';
 import WalletIcon from '../SvgComponents/WalletIcon';
 import useWindowSize from '../useWindowSize';
+import WalletGradientIcon from '../SvgComponents/WalletGradientIcon';
 
-const SearchBar = () => (
-  <form class="flex items-center">
+const SearchBar = (props) => (
+  <div class="flex items-center" {...props}>
     <label for="simple-search" class="sr-only">
       Search
     </label>
     <div class="relative w-full">
-      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        <SearchIcon className="" />
+      <div class="absolute inset-y-0 left-0 flex items-center py-3 px-9 pointer-events-none">
+        <SearchIcon />
       </div>
       <input
         type="text"
         id="simple-search"
-        class="w-80 gradient_border text-gray-900 text-sm rounded-lg block w-full pl-10 p-2.5 "
+        class="w-80 xl:w-96  min-w-40 gradient_border text-gray-900 text-xs rounded-lg block pl-20 py-4 outline-none"
         placeholder="Search items, collections, and accounts"
         required
       />
     </div>
-  </form>
+  </div>
 );
 
 const Navbar = () => {
@@ -59,13 +60,13 @@ const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 text-base w-full z-10 ${
+      className={` sticky top-0 text-base w-full z-50 ${
         ifScrolling
           ? 'transition-all ease-linear duration-100 bg-[#ffffff1f] backdrop-blur-xl drop-shadow-sm'
           : ''
       }`}
     >
-      <div className="mx-auto max-w-[1400px] px-4">
+      <div className="container mx-auto px-4">
         <div className="relative flex h-[80px] items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
             <button
@@ -92,16 +93,16 @@ const Navbar = () => {
             <div
               className={`${
                 !open ? 'hidden' : ''
-              } my-8 lg:my-0 basis-full grow lg:block`}
+              } my-8 lg:my-0 basis-full grow lg:flex justify-end`}
             >
               <div
                 class={`${
                   open ? 'mt-80 bg-black' : ''
-                } flex flex-col gap-3 lg:flex-row lg:items-center items-center sm:justify-end `}
+                } flex flex-col lg:flex-row lg:items-center items-center sm:justify-end space-x-2 xl:space-x-10`}
               >
-                <SearchBar />
+                <SearchBar className="hidden md:block xl:mr-8" />
                 {(navbarLinks || []).map((item, index) => (
-                  <div key={index}>
+                  <div key={index} className="text-sm">
                     <div
                       className={`inline-flex lg:flex justify-start ${
                         item?.url === '/donate' || item?.url === '/admin/login'
@@ -113,7 +114,10 @@ const Navbar = () => {
                     >
                       {item?.url == '/account' ? (
                         <CustomLink href={item?.url}>
-                          <Button className="w-40" variant="outlined">
+                          <Button
+                            className="px-5 !py-1.5 !text-sm"
+                            variant="outlined"
+                          >
                             {item?.name}
                           </Button>
                         </CustomLink>
@@ -121,11 +125,11 @@ const Navbar = () => {
                         <div className="hidden lg:block">
                           <CustomLink href={item?.url}>
                             <div className="flex justify-center items-center">
-                              {/* <WalletIcon /> */}
                               <Button
-                                className="w-56 flex items-center"
+                                className="flex items-center px-6 !py-1.5 !text-sm"
                                 onClick={navbarToggle}
                               >
+                                <WalletIcon className="w-5 h-5 mr-2" />
                                 {item?.name}
                               </Button>
                             </div>
@@ -135,7 +139,7 @@ const Navbar = () => {
                         <li
                           onClick={navbarToggle}
                           key={item?.name}
-                          className={`block font-medium pt-3 px-3 pb-2 mb-1 rounded lg:bg-transparent`}
+                          className={`block font-medium px-3 rounded lg:bg-transparent`}
                         >
                           <CustomLink
                             href={item?.url}
@@ -158,13 +162,8 @@ const Navbar = () => {
             </div>
             <div class="lg:hidden absolute right-0 flex flex-shrink-0 items-center lg:static">
               <div class="flex items-center gap-x-3">
-                <SearchIcon />
-                <CustomImage
-                  src="/nft_logo.svg"
-                  width={24}
-                  height={24}
-                  alt="nft_logo"
-                />
+                <SearchIcon className="block" />
+                <WalletGradientIcon className="w-6 h-6" />
               </div>
             </div>
           </div>

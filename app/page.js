@@ -1,34 +1,32 @@
-import { gruppo } from './fonts';
-import InfoBlock from './components/InfoBlock';
-import SectionTitle from './components/SectionTitle';
-import Button from './components/Button';
-import ProductBlock from './components/ProductBlock';
 import CollectionBlock from './components/CollectionBlock';
-import { collectionData, infoData, productData } from './constants';
+import CustomImage from './components/CustomImage';
+import HeroBlock from './components/HeroBlock';
+import InfoBlock from './components/InfoBlock';
+import ProductBlock from './components/ProductBlock';
 import VideoSection from './components/VideoSection';
+import { collectionData, infoData, productData } from './constants';
 
 export default function Home() {
   return (
-    <main className={`min-h-screen`}>
-      <Button variant="outlined">Explore</Button>
-      <Button>Create</Button>
+    <main className="relative">
+      <CustomImage
+        width={770}
+        height={770}
+        className="absolute top-[-70px] right-0 z-[-1]"
+        src="/hero_image.png"
+        alt="hero_image"
+      />
+      <div className={`min-h-screen mx-auto`}>
+        <HeroBlock />
 
-      <h1 className={`${gruppo.className} text-4xl`}>
-        The world's first non-fungible token (NFT) marketplace for both digital
-        and physical assets.
-      </h1>
+        <ProductBlock data={productData} />
 
-      <CollectionBlock data={collectionData} />
+        <CollectionBlock data={collectionData} />
 
-      <ProductBlock data={productData} />
+        <InfoBlock data={infoData} />
 
-      <SectionTitle title="Hidden Gems" />
-
-      <SectionTitle title="Top collections" />
-
-      <InfoBlock data={infoData} />
-
-      <VideoSection />
+        <VideoSection />
+      </div>
     </main>
   );
 }

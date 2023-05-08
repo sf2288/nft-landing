@@ -1,5 +1,6 @@
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import { gruppo } from './fonts';
 import './globals.css';
 
 export const metadata = {
@@ -10,10 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${gruppo.className}`}>
         <Navbar />
         <main>{children}</main>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

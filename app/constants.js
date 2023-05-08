@@ -1,35 +1,27 @@
-import CollectionIcon from './components/SvgComponents/CollectionIcon';
-import PictureIcon from './components/SvgComponents/PictureIcon';
-import WalletIcon from './components/SvgComponents/WalletIcon';
-import ShoppingBagIcon from './components/SvgComponents/ShoppingBagIcon';
-import product1 from '../public/product1.png';
-import user1 from '../public/user1.png';
-import product2 from '../public/product2.png';
-import user2 from '../public/user2.png';
-import product3 from '../public/product3.png';
-import user3 from '../public/user3.png';
-import collection1 from '../public/collection1.png';
-import collection2 from '../public/collection2.png';
-import collection3 from '../public/collection3.png';
-import collection4 from '../public/collection4.png';
-import collection5 from '../public/collection5.png';
-import collection6 from '../public/collection6.png';
-import collection7 from '../public/collection7.png';
-import collection8 from '../public/collection8.png';
 import artist1 from '../public/artist1.png';
 import artist2 from '../public/artist2.png';
 import artist3 from '../public/artist3.png';
 import artist4 from '../public/artist4.png';
-import artist5 from '../public/artist5.png';
-import artist6 from '../public/artist6.png';
-import artist7 from '../public/artist7.png';
-import artist8 from '../public/artist8.png';
-import telegram from '../public/socials/telegram.png';
-import twitter from '../public/socials/twitter.png';
-import youtube from '../public/socials/youtube.png';
+import collection1 from '../public/collection1.png';
+import collection2 from '../public/collection2.png';
+import collection3 from '../public/collection3.png';
+import collection4 from '../public/collection4.png';
+import product1 from '../public/product1.png';
+import product2 from '../public/product2.png';
+import product3 from '../public/product3.png';
 import facebook from '../public/socials/facebook.png';
 import instagram from '../public/socials/instagram.png';
+import telegram from '../public/socials/telegram.png';
 import tiktok from '../public/socials/tiktok.png';
+import twitter from '../public/socials/twitter.png';
+import youtube from '../public/socials/youtube.png';
+import user1 from '../public/user1.png';
+import user2 from '../public/user2.png';
+import user3 from '../public/user3.png';
+import CollectionIcon from './components/SvgComponents/CollectionIcon';
+import PictureIcon from './components/SvgComponents/PictureIcon';
+import ShoppingBagIcon from './components/SvgComponents/ShoppingBagIcon';
+import WalletGradientIcon from '../public/wallet_gradient.png';
 
 export const socials = [
   telegram,
@@ -65,7 +57,7 @@ export const navbarLinks = [
 
 export const infoData = [
   {
-    icon: <WalletIcon />,
+    // icon: WalletGradientIcon,
     title: 'Set up your wallet',
     info: 'Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner. Learn about the wallets we support.',
   },
@@ -142,4 +134,13 @@ export const collectionData = [
     artist: 'Mooncakes',
     price: '2.756 ETH',
   },
+  {
+    image: collection4,
+    avatar: artist4,
+    title: 'Earth Mooncake',
+    artist: 'Mooncakes',
+    price: '2.756 ETH',
+  },
 ];
+
+export const videoURL = 'https://www.youtube-nocookie.com/embed/4RrCkd6Yn_w?autoplay=1&amp;controls=1&amp;disablekb=1&amp;playsinline=1&amp;cc_load_policy=0&amp;cc_lang_pref=auto&amp;widget_referrer=https%3A%2F%2Fappline-tailwind.preview.uideck.com%2F&amp;noCookie=true&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fappline-tailwind.preview.uideck.com&amp;widgetid=8'

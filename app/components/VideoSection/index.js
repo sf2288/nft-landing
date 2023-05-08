@@ -1,14 +1,32 @@
-import React from 'react';
+'use client';
+import { videoURL } from '@/app/constants';
 import Button from '../Button';
+import { useState } from 'react';
+import CustomModal from '../CustomModal';
+import thumbnail from '../../../public/thumbnail.png';
+import CustomImage from '../CustomImage';
+import PlayIcon from '../SvgComponents/PlayIcon';
 
 export default function VideoSection() {
+  const [modal, setModal] = useState(false);
   return (
-    <div>
-      <h1 className="text-4xl">Discover the latest #TOPNFT</h1>
-      <p className="text-xl gradient_text">
+    <div className="py-32 container text-center flex flex-col justify-center items-center">
+      <h2 className="text-4xl">Discover the latest #TOPNFT</h2>
+      <p className="text-xl gradient_text mt-2">
         The NFT marketplace with everything for everyone
       </p>
-      <Button className='w-auto px-8'>Explore the marketplace</Button>
+      {modal ? (
+        <CustomModal setModal={setModal} modal={modal} videoURL={videoURL} />
+      ) : null}
+      <div
+        className="relative my-14 cursor-pointer"
+        onClick={() => setModal(!modal)}
+      >
+        <CustomImage width={994} height={483} src={thumbnail} alt="thumbnail" />
+        <div className="absolute w-full h-full bg-[#00000080] inset-0"></div>
+        <PlayIcon className="z-30 w-14 h-14 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      </div>
+      <Button className="w-auto px-8 !py-[14px]">Explore the marketplace</Button>
     </div>
   );
 }

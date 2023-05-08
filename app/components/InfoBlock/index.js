@@ -1,11 +1,8 @@
-'use client';
-
-import React from 'react';
-
 export default function InfoBlock({ data }) {
   return (
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
+    <section class="text-gray-600 body-font px-5 py-[76px] mx-auto mt-16 mb-32">
+      <div class="container ">
+        <h2 className="text-4xl mb-24">Create and sell your NFTs</h2>
         <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
           {(data || []).map((i) => (
             <div class="p-4 md:w-1/2 lg:w-1/4 flex flex-col text-center items-center">
