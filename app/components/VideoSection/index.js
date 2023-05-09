@@ -11,7 +11,7 @@ export default function VideoSection() {
   const [modal, setModal] = useState(false);
   return (
     <div className="py-32 container text-center flex flex-col justify-center items-center">
-      <h2 className="text-4xl">Discover the latest #TOPNFT</h2>
+      <h2 className="text-3xl sm:text-4xl">Discover the latest #TOPNFT</h2>
       <p className="text-xl gradient_text mt-2">
         The NFT marketplace with everything for everyone
       </p>

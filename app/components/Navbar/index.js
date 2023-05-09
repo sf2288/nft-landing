@@ -10,6 +10,9 @@ import SearchIcon from '../SvgComponents/SearchIcon';
 import WalletIcon from '../SvgComponents/WalletIcon';
 import useWindowSize from '../useWindowSize';
 import WalletGradientIcon from '../SvgComponents/WalletGradientIcon';
+import themeSwitch from '../../../public/theme-switch.png';
+import { useTheme } from 'next-themes';
+import ThemeSwitch from '../ThemeSwitch';
 
 const SearchBar = (props) => (
   <div class="flex items-center" {...props}>
@@ -36,6 +39,8 @@ const Navbar = () => {
   const [scrollState, setScrollState] = useState(false);
   const router = useRouter();
   const { pathname } = router;
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
 
   const navbarToggle = () => setOpen(!open);
 
@@ -74,7 +79,7 @@ const Navbar = () => {
               onClick={navbarToggle}
             >
               <span class="sr-only">Open mobile menu</span>
-              <Hamburger />
+              <Hamburger className="h-6 w-6" />
             </button>
           </div>
           <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-between">
@@ -93,14 +98,16 @@ const Navbar = () => {
             <div
               className={`${
                 !open ? 'hidden' : ''
-              } my-8 lg:my-0 basis-full grow lg:flex justify-end`}
+              } basis-full grow lg:flex justify-end`}
             >
               <div
                 class={`${
-                  open ? 'mt-80 bg-black' : ''
-                } flex flex-col lg:flex-row lg:items-center items-center sm:justify-end space-x-2 xl:space-x-10`}
+                  open ? 'mt-60 bg-black' : ''
+                } space-y-4 lg:space-y-0 flex flex-col lg:flex-row lg:items-center items-center sm:justify-end space-x-2 xl:space-x-10`}
               >
-                <SearchBar className="hidden md:block xl:mr-8" />
+                <div className="hidden lg:block xl:mr-8">
+                  <SearchBar className="" />
+                </div>
                 {(navbarLinks || []).map((item, index) => (
                   <div key={index} className="text-sm">
                     <div
@@ -161,10 +168,33 @@ const Navbar = () => {
               </div>
             </div>
             <div class="lg:hidden absolute right-0 flex flex-shrink-0 items-center lg:static">
-              <div class="flex items-center gap-x-3">
+              <div class="flex items-center gap-x-4">
                 <SearchIcon className="block" />
                 <WalletGradientIcon className="w-6 h-6" />
+                <CustomImage
+                  src={themeSwitch}
+                  width={22}
+                  height={22}
+                  alt="themeSwitch"
+                  className="cursor-pointer lg:hidden block"
+                  onClick={() =>
+                    theme == 'dark' ? setTheme('light') : setTheme('dark')
+                  }
+                />
               </div>
+            </div>
+            <div className="ml-2 items-center hidden lg:flex">
+              {/* <CustomImage
+                src={themeSwitch}
+                width={22}
+                height={22}
+                alt="themeSwitch"
+                className="cursor-pointer"
+                onClick={() =>
+                  theme == 'dark' ? setTheme('light') : setTheme('dark')
+                }
+              /> */}
+              <ThemeSwitch />
             </div>
           </div>
         </div>

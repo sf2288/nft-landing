@@ -27,8 +27,8 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div className="flex flex-wrap w-full lg:w-3/5">
-          <div className="flex flex-wrap w-full lg:w-2/3 my-10">
+        <div className="flex flex-wrap w-full lg:w-3/5 my-10">
+          <div className="flex flex-wrap w-full lg:w-2/3 mb-10">
             <div class="w-1/3 space-y-[14px]">
               <h2 class="gradient_text mb-3 font-bold text-sm leading-5">
                 Company
