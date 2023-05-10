@@ -27,14 +27,14 @@ export default function ProductBlock({ data }) {
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
-                <h2 class="text-base text-gray-900 dark:text-white font-medium title-font">
+                <h2 class="text-base text-custom-blue dark:text-white font-medium title-font">
                   {i?.username}
                 </h2>
-                <h3 class="text-indigo-500 dark:text-white text-sm font-medium mb-4">
+                <h3 class="text-custom-blue dark:text-white text-sm font-medium mb-4">
                   Create by <span className="gradient_text">{i?.creater}</span>
                 </h3>
               </div>
-              <p class="leading-relaxed text-sm dark:text-white font-normal">
+              <p class="leading-relaxed text-sm text-custom-blue dark:text-white font-normal">
                 {i?.details}
               </p>
             </div>

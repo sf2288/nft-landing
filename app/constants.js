@@ -9,19 +9,18 @@ import collection4 from '../public/collection4.png';
 import product1 from '../public/product1.png';
 import product2 from '../public/product2.png';
 import product3 from '../public/product3.png';
-import facebook from '../public/socials/facebook.png';
-import instagram from '../public/socials/instagram.png';
-import telegram from '../public/socials/telegram.png';
-import tiktok from '../public/socials/tiktok.png';
-import twitter from '../public/socials/twitter.png';
-import youtube from '../public/socials/youtube.png';
+import facebook from '../public/socials/facebook.svg';
+import instagram from '../public/socials/instagram.svg';
+import telegram from '../public/socials/telegram.svg';
+import tiktok from '../public/socials/tiktok.svg';
+import twitter from '../public/socials/twitter.svg';
+import youtube from '../public/socials/youtube.svg';
 import user1 from '../public/user1.png';
 import user2 from '../public/user2.png';
 import user3 from '../public/user3.png';
 import CollectionIcon from './components/SvgComponents/CollectionIcon';
 import PictureIcon from './components/SvgComponents/PictureIcon';
 import ShoppingBagIcon from './components/SvgComponents/ShoppingBagIcon';
-import WalletGradientIcon from '../public/wallet_gradient.png';
 
 export const socials = [
   telegram,
@@ -57,7 +56,7 @@ export const navbarLinks = [
 
 export const infoData = [
   {
-    // icon: WalletGradientIcon,
+    icon: <PictureIcon />,
     title: 'Set up your wallet',
     info: 'Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner. Learn about the wallets we support.',
   },

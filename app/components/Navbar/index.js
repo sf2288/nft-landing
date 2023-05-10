@@ -12,7 +12,6 @@ import useWindowSize from '../useWindowSize';
 import WalletGradientIcon from '../SvgComponents/WalletGradientIcon';
 import themeSwitch from '../../../public/theme-switch.png';
 import { useTheme } from 'next-themes';
-import ThemeSwitch from '../ThemeSwitch';
 
 const SearchBar = (props) => (
   <div class="flex items-center" {...props}>
@@ -39,8 +38,7 @@ const Navbar = () => {
   const [scrollState, setScrollState] = useState(false);
   const router = useRouter();
   const { pathname } = router;
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  const { theme, setTheme } = useTheme();
 
   const navbarToggle = () => setOpen(!open);
 
@@ -79,7 +77,9 @@ const Navbar = () => {
               onClick={navbarToggle}
             >
               <span class="sr-only">Open mobile menu</span>
-              <Hamburger className="h-6 w-6" />
+              <div className="text-base text-custom-blue dark:text-white">
+                <Hamburger className="h-6 w-6" />
+              </div>
             </button>
           </div>
           <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-between">
@@ -122,7 +122,7 @@ const Navbar = () => {
                       {item?.url == '/account' ? (
                         <CustomLink href={item?.url}>
                           <Button
-                            className="px-5 !py-1.5 !text-sm"
+                            className="px-5 !py-1.5 !text-sm font-bold"
                             variant="outlined"
                           >
                             {item?.name}
@@ -133,7 +133,7 @@ const Navbar = () => {
                           <CustomLink href={item?.url}>
                             <div className="flex justify-center items-center">
                               <Button
-                                className="flex items-center px-6 !py-1.5 !text-sm"
+                                className="flex items-center px-6 !py-1.5 !text-sm font-bold"
                                 onClick={navbarToggle}
                               >
                                 <WalletIcon className="w-5 h-5 mr-2" />
@@ -146,7 +146,7 @@ const Navbar = () => {
                         <li
                           onClick={navbarToggle}
                           key={item?.name}
-                          className={`block font-medium px-3 rounded lg:bg-transparent`}
+                          className={`block px-3 rounded lg:bg-transparent font-bold`}
                         >
                           <CustomLink
                             href={item?.url}
@@ -184,7 +184,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="ml-2 items-center hidden lg:flex">
-              {/* <CustomImage
+              <CustomImage
                 src={themeSwitch}
                 width={22}
                 height={22}
@@ -193,8 +193,7 @@ const Navbar = () => {
                 onClick={() =>
                   theme == 'dark' ? setTheme('light') : setTheme('dark')
                 }
-              /> */}
-              <ThemeSwitch />
+              />
             </div>
           </div>
         </div>

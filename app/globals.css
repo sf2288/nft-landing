@@ -2,19 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1f1d2b;
-  }
-}
-
-body {
-  background: var(--background);
-  color: white;
+*, body{
+  font-weight: 700 !important;
 }
 
 .gradient_text {
@@ -22,10 +11,6 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.black_bg {
-  background: var(--background);
 }
 
 .btn_gradient {
@@ -39,19 +24,9 @@ body {
 }
 
 .gradient_border {
-  border: solid 2px transparent;
   border-radius: 35px;
-  background-image: linear-gradient(#1f1d2b, #1f1d2b),
-    linear-gradient(to right, #73e0a9, #5b68df);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-}
-
-.footer_gradient_border {
   border: solid 2px transparent;
-  border-radius: 8px;
-  background-image: linear-gradient(#1f1d2b, #1f1d2b),
-    linear-gradient(to right, #73e0a9, #5b68df);
+  @apply bg-light-border-image dark:bg-border-image;
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
@@ -61,46 +36,10 @@ body {
   height: 1px;
 }
 
-.text-truncate {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  white-space: normal;
-}
-
 .text-truncate-1 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   white-space: normal;
-}
-
-.text-truncate-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  white-space: normal;
-}
-
-.text-truncate-4 {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  white-space: normal;
-}
-
-.text-truncate-6 {
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  white-space: normal;
-}
-
-.bgnone {
-  background: none;
 }

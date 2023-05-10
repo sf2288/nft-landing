@@ -1,12 +1,10 @@
-import React from 'react';
-import CustomLink from '../CustomLink';
-import CustomImage from '../CustomImage';
-import Button from '../Button';
 import { socials } from '@/app/constants';
+import CustomImage from '../CustomImage';
+import CustomLink from '../CustomLink';
 
 export default function Footer() {
   return (
-    <footer class="text-gray-600 body-font px-5">
+    <footer class="text-gray-600 body-font px-5 text-custom-blue dark:text-white">
       <div className="container flex flex-wrap">
         <div className="w-full lg:w-2/5">
           <div class="w-64 flex-shrink-0 flex flex-col md:items-start items-center md:mx-0 mx-auto text-center md:text-left">
@@ -18,7 +16,7 @@ export default function Footer() {
                 alt="nft_logo"
               />
             </CustomLink>
-            <p class="my-2 text-sm dark:text-white uppercase font-bold">
+            <p class="my-2 text-sm  uppercase font-bold">
               TheFund
             </p>
             <p className="text-sm not-italic leading-5 text-justify font-[350]">
@@ -87,9 +85,9 @@ export default function Footer() {
             <h2 class="gradient_text mb-3 font-bold text-sm leading-5">
               Follow us on
             </h2>
-            <nav class="grid grid-rows-2 grid-flow-col gap-y-6">
+            <nav class="grid grid-rows-2 grid-flow-col gap-y-6 ">
               {(socials || []).map((i) => (
-                <div className="footer_gradient_border p-3 flex w-[55px] h-[55px] justify-center items-center">
+                <div className="gradient_border !rounded-lg p-3 flex w-[55px] h-[55px] justify-center items-center text-custom-blue dark:text-white">
                   <CustomImage src={i} width={40} height={40} alt="nft_logo" />
                 </div>
               ))}

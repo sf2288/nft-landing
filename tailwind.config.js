@@ -8,13 +8,15 @@ module.exports = {
   ],
   theme: {
     colors: {
-      black: '#1F1D2B',
+      'custom-blue': '#1F1D2B',
+      white: '#ffffff',
     },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'border-image':
+          'linear-gradient(#1f1d2b, #1f1d2b), linear-gradient(to right, #73e0a9, #5b68df)',
+        'light-border-image':
+          'linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #73e0a9, #5b68df)',
       },
     },
     container: {
