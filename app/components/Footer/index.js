@@ -1,6 +1,20 @@
-import { socials } from '@/app/constants';
 import CustomImage from '../CustomImage';
 import CustomLink from '../CustomLink';
+import FacebookIcon from '../SvgComponents/FacebookIcon';
+import InstagramIcon from '../SvgComponents/InstagramIcon';
+import TelegramIcon from '../SvgComponents/TelegramIcon';
+import TiktokIcon from '../SvgComponents/TiktokIcon';
+import TwitterIcon from '../SvgComponents/TwitterIcon';
+import YoutubeIcon from '../SvgComponents/YoutubeIcon';
+
+const socials = [
+  <FacebookIcon className="text-custom-blue dark:text-white" />,
+  <TwitterIcon className="text-custom-blue dark:text-white" />,
+  <YoutubeIcon className="text-custom-blue dark:text-white" />,
+  <InstagramIcon className="text-custom-blue dark:text-white" />,
+  <TelegramIcon className="text-custom-blue dark:text-white" />,
+  <TiktokIcon className="text-custom-blue dark:text-white" />,
+];
 
 export default function Footer() {
   return (
@@ -16,9 +30,7 @@ export default function Footer() {
                 alt="nft_logo"
               />
             </CustomLink>
-            <p class="my-2 text-sm  uppercase font-bold">
-              TheFund
-            </p>
+            <p class="my-2 text-sm  uppercase font-bold">TheFund</p>
             <p className="text-sm not-italic leading-5 text-justify font-[350]">
               TheFund is the world's first non-fungible token (NFT) marketplace
               for both digital and physical assets
@@ -86,9 +98,12 @@ export default function Footer() {
               Follow us on
             </h2>
             <nav class="grid grid-rows-2 grid-flow-col gap-y-6 ">
-              {(socials || []).map((i) => (
-                <div className="gradient_border !rounded-lg p-3 flex w-[55px] h-[55px] justify-center items-center text-custom-blue dark:text-white">
-                  <CustomImage src={i} width={40} height={40} alt="nft_logo" />
+              {(socials || []).map((i, j) => (
+                <div
+                  key={j}
+                  className="gradient_border !rounded-lg p-3 flex w-[55px] h-[55px] justify-center items-center text-custom-blue dark:text-white"
+                >
+                  {i}
                 </div>
               ))}
             </nav>

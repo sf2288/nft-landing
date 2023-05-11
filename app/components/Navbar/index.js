@@ -169,7 +169,7 @@ const Navbar = () => {
             </div>
             <div class="lg:hidden absolute right-0 flex flex-shrink-0 items-center lg:static">
               <div class="flex items-center gap-x-4">
-                <SearchIcon className="block" />
+                <SearchIcon  />
                 <WalletGradientIcon className="w-6 h-6" />
                 <CustomImage
                   src={themeSwitch}

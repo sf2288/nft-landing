@@ -12,7 +12,7 @@ export default function Home() {
       <CustomImage
         width={770}
         height={770}
-        className="absolute top-[-70px] right-0 z-[-1]"
+        className="absolute top-[-70px] right-0 z-0"
         src="/hero_image.png"
         alt="hero_image"
       />

@@ -17,6 +17,10 @@
   background: linear-gradient(90.71deg, #73e0a9 0%, #5b68df 100%);
 }
 
+.text_gradient {
+  color: linear-gradient(90.71deg, #73e0a9 0%, #5b68df 100%);
+}
+
 .btn_border {
   border-image: linear-gradient(90.71deg, #73e0a9 0%, #5b68df 100%);
   border-width: 4px;

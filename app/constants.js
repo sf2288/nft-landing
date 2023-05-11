@@ -2,10 +2,18 @@ import artist1 from '../public/artist1.png';
 import artist2 from '../public/artist2.png';
 import artist3 from '../public/artist3.png';
 import artist4 from '../public/artist4.png';
+import artist5 from '../public/artist5.png';
+import artist6 from '../public/artist6.png';
+import artist7 from '../public/artist7.png';
+import artist8 from '../public/artist8.png';
 import collection1 from '../public/collection1.png';
 import collection2 from '../public/collection2.png';
 import collection3 from '../public/collection3.png';
 import collection4 from '../public/collection4.png';
+import collection5 from '../public/collection5.png';
+import collection6 from '../public/collection6.png';
+import collection7 from '../public/collection7.png';
+import collection8 from '../public/collection8.png';
 import product1 from '../public/product1.png';
 import product2 from '../public/product2.png';
 import product3 from '../public/product3.png';
@@ -21,6 +29,7 @@ import user3 from '../public/user3.png';
 import CollectionIcon from './components/SvgComponents/CollectionIcon';
 import PictureIcon from './components/SvgComponents/PictureIcon';
 import ShoppingBagIcon from './components/SvgComponents/ShoppingBagIcon';
+import WalletGradientIcon from './components/SvgComponents/WalletGradientIcon';
 
 export const socials = [
   telegram,
@@ -56,7 +65,7 @@ export const navbarLinks = [
 
 export const infoData = [
   {
-    icon: <PictureIcon />,
+    icon: <WalletGradientIcon className="text_gradient"/>,
     title: 'Set up your wallet',
     info: 'Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner. Learn about the wallets we support.',
   },
@@ -134,11 +143,32 @@ export const collectionData = [
     price: '2.756 ETH',
   },
   {
-    image: collection4,
-    avatar: artist4,
-    title: 'Earth Mooncake',
-    artist: 'Mooncakes',
+    image: collection5,
+    avatar: artist5,
+    title: 'Corrupt Floppy Disk',
+    artist: 'The Transmission Items',
+    price: '0.218 ETH',
+  },
+  {
+    image: collection6,
+    avatar: artist6,
+    title: 'Ape Episode #128',
+    artist: 'Bored Ape Yacht Club',
     price: '2.756 ETH',
+  },
+  {
+    image: collection7,
+    avatar: artist7,
+    title: 'Neo R #028',
+    artist: 'Watari',
+    price: '0.587 ETH',
+  },
+  {
+    image: collection8,
+    avatar: artist8,
+    title: 'Yact Mutant Academy',
+    artist: 'Mutant Ape Yacht Club',
+    price: '1.048 ETH',
   },
 ];
 

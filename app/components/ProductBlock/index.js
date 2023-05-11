@@ -1,10 +1,18 @@
 import React from 'react';
 import CustomImage from '../CustomImage';
 import SectionTitle from '../SectionTitle';
+import blueDot from '../../../public/blue_dot.svg';
 
 export default function ProductBlock({ data }) {
   return (
-    <section class="text-gray-600 body-font">
+    <section class="text-gray-600 body-font z-[10] relative">
+      <CustomImage
+        className="rounded-full absolute opacity-50 blur-[254.5px] left-0 bottom-0 z-[-1]"
+        src={blueDot}
+        width={666}
+        height={666}
+        alt="blue dot"
+      />
       <div class="container px-5 pt-32 mx-auto space-y-6">
         <SectionTitle title="Hidden Gems" />
         <div class="grid gap-x-4 xl:gap-x-32 gap-y-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center md:justify-items-stretch">
