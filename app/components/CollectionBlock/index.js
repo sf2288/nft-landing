@@ -55,20 +55,6 @@ export default function CollectionBlock({ data }) {
             </div>
           ))}
         </div>
-        <CustomImage
-          className="rounded-full absolute opacity-50 blur-[254.5px] z-[-1]"
-          src={greenDot}
-          width={666}
-          height={666}
-          alt="green dot"
-        />
-        <CustomImage
-          className="rounded-full absolute opacity-50 blur-[254.5px] right-0 bottom-0 z-[-1]"
-          src={blueDot}
-          width={666}
-          height={666}
-          alt="blue dot"
-        />
       </div>
     </section>
   );

@@ -13,20 +13,6 @@ export default function VideoSection() {
   const [modal, setModal] = useState(false);
   return (
     <div className="py-32 px-5 text-center flex flex-col justify-center items-center relative">
-      <CustomImage
-        className="rounded-full absolute opacity-50 blur-[254.5px] z-[-1]"
-        src={blueDot}
-        width={999}
-        height={999}
-        alt="blue dot"
-      />
-      <CustomImage
-        className="rounded-full absolute opacity-50 blur-[254.5px] z-[-1] right-0 bottom-0"
-        src={greenDot}
-        width={999}
-        height={999}
-        alt="blue dot"
-      />
       <h2 className="text-3xl sm:text-4xl text-custom-blue dark:text-white">
         Discover the latest #TOPNFT
       </h2>

@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-*, body{
+*,
+body {
   font-weight: 700 !important;
 }
 
